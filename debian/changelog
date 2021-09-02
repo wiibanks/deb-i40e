@@ -1,34 +1,59 @@
-Changelog for i40e-2.15.9
-===========================================================================
-Add forwarding GRE UDP and IP packets to VF
-Add a check to see if MFS is set
-Add warning when adding mirror vlan rule
-Add Asym_Pause to supported link modes
-Del rx_fragments and rx_jabber from rx_errors
-Fix delay after global reset
-Fix ATR queue selection
-Fix DCB enable flag while TCs are created
-Fix the link loss on driver unload
-Fix acquire VSI pointer only after VF is initialized
-Fix not blinking X722 with x557 PHY via ‘ethtool -p'
-Fix add tc filter for IPv6
-Fix race condition while deleting MAC/VLAN filters
-Fix setting PF MAC filters when changing MAC address
-Fix VF notification when changing vlan strip status through sysfs
-Fix PHY type identifiers for 2.5G and 5G adapters
-Fix display error code in dmesg
-Fix display statistics for veb_tc
-Fix return ENOPKG when right DDP package is missing
-Fix endianness conversions
-Fix build failures on current upstream and OSV kernels
+i40e (i40e-2.16.11) stable; urgency=medium
+  * Add limited QinQ support
+  * Add ability to change VFs default MAC address
+  * Add new virtchnl support
+  * Add error message for hw limitation to create new VSI
+  * oops at i40e_rebuild()
+  * ping is lost after configuring ADq on VF
+  * race condition while adding MAC/VLAN filters
+  * tc filter add to tc0 for VF
+  * ATR queue selection
+  * potentially uninitialized variables in NVM code
+  * PTP on 5Gb links
+  * NULL pointer dereference in i40e_dbg_dump_desc
+  * rx_fragments and rx_jabber in rx_errors
+  * display statistics for veb_tc
+  * huge memory usage in kdump
+  * the restart auto-negotiation after FEC modified
+  * pre-set max number of queues for VF
+  * incorrect argument in call to ipv6_addr_any()
+  * mac filter delete when setting mac address
+  * delete MAC for untrusted VF
+  * error when deleting MAC filter for untrusted VF
+  * several kernel-doc
+  * build failures on current upstream and OSV kernels
+
+ -- John Willbanks <jwillbanks@gmail.com> Thu, 2 Sep 2021 11:10:00 -0700
+
+i40e (i40e-2.15.9) unstable; urgency=medium
+  * Add forwarding GRE UDP and IP packets to VF
+  * Add a check to see if MFS is set
+  * Add warning when adding mirror vlan rule
+  * Add Asym_Pause to supported link modes
+  * Del rx_fragments and rx_jabber from rx_errors
+  * delay after global reset
+  * ATR queue selection
+  * DCB enable flag while TCs are created
+  * the link loss on driver unload
+  * acquire VSI pointer only after VF is initialized
+  * not blinking X722 with x557 PHY via ‘ethtool -p'
+  * add tc filter for IPv6
+  * race condition while deleting MAC/VLAN filters
+  * setting PF MAC filters when changing MAC address
+  * VF notification when changing vlan strip status through sysfs
+  * PHY type identifiers for 2.5G and 5G adapters
+  * display error code in dmesg
+  * display statistics for veb_tc
+  * return ENOPKG when right DDP package is missing
+  * endianness conversions
+  * build failures on current upstream and OSV kernels
 
 
-NOTE:  Receive Error counts may be higher than the actual packet error count
----------------------------------------------------------------------
-When a packet is received with more than one error, two bad packets may be
-reported. This affects all devices based on 10G, or faster, controllers.
+  NOTE:  Receive Error counts may be higher than the actual packet error count
+  When a packet is received with more than one error, two bad packets may be
+  reported. This affects all devices based on 10G, or faster, controllers.
 
--- James Fette <jfette@gmail.com> Mon, 10 May 2021 11:58:00 -0400
+ -- James Fette <jfette@gmail.com> Mon, 10 May 2021 11:58:00 -0400
 
 i40e (2.14.13) unstable; urgency=medium
 
