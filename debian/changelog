@@ -1,4 +1,4 @@
-i40e (i40e-2.16.11) stable; urgency=medium
+i40e (2.16.11) stable; urgency=medium
   * Add limited QinQ support
   * Add ability to change VFs default MAC address
   * Add new virtchnl support
@@ -25,7 +25,7 @@ i40e (i40e-2.16.11) stable; urgency=medium
 
  -- John Willbanks <jwillbanks@gmail.com>  Thu, 02 Sep 2021 11:10:00 -0700
 
-i40e (i40e-2.15.9) unstable; urgency=medium
+i40e (2.15.9) unstable; urgency=medium
   * Add forwarding GRE UDP and IP packets to VF
   * Add a check to see if MFS is set
   * Add warning when adding mirror vlan rule
