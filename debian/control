@@ -1,7 +1,7 @@
 Source: i40e
 Section: net
 Priority: optional
-Maintainer: Damjan Marion <dmarion@me.com>
+Maintainer: John Willbanks <willbanks.john@gmail.com>
 Build-Depends: debhelper (>= 9), dkms
 Standards-Version: 3.9.4
 
