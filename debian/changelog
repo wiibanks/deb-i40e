@@ -23,7 +23,7 @@ i40e (2.17.4) stable; urgency=medium
   * Refactor arrow operator usage in i40e_update_adq_vsi_queues()
   * Refactor Rx path for re-use
 
- -- John Willbanks <jwillbanks@gmail.com>  Thu, 02 Sep 2021 11:10:00 -0700
+ -- John Willbanks <willbanks.john@gmail.com>  Thu, 02 Sep 2021 11:10:00 -0700
 
 i40e (2.16.11) stable; urgency=medium
   * Add limited QinQ support
@@ -50,7 +50,7 @@ i40e (2.16.11) stable; urgency=medium
   * several kernel-doc
   * build failures on current upstream and OSV kernels
 
- -- John Willbanks <jwillbanks@gmail.com>  Thu, 02 Sep 2021 11:10:00 -0700
+ -- John Willbanks <willbanks.john@gmail.com>  Thu, 02 Sep 2021 11:10:00 -0700
 
 i40e (2.15.9) unstable; urgency=medium
   * Add forwarding GRE UDP and IP packets to VF
